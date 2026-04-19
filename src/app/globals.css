@@ -1,26 +1,89 @@
-@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --bg: #0b0f19;
+  --card: #111827;
+  --border: #1f2937;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --text: #e5e7eb;
+  --muted: #9ca3af;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary: #6366f1;
+  --secondary: #a855f7;
+  --accent: #ec4899;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
 }
+
+/* layout */
+.section {
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* glow background */
+.bg-glow {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #6366f1, transparent 60%);
+  filter: blur(120px);
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #6366f1;
+  box-shadow: 0 10px 40px rgba(99,102,241,0.2);
+}
+
+/* skill pills */
+.skill {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  color: white;
+}
+
+/* gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #6366f1, transparent);
+  margin: 60px 0;
+}    
