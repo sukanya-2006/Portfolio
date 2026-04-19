@@ -35,7 +35,7 @@ const socials = [
   },
   {
     label:  "Twitter / X",
-    handle: "@@SukanyaBho45080",
+    handle: "@SukanyaBho45080",
     href:   "https://x.com/SukanyaBho45080",
     color:  "#e8641a",
     icon: (
