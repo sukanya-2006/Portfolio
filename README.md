@@ -23,7 +23,7 @@ Built with a focus on clean UI, smooth animations, and real-world projects.
 * **Styling:** CSS / Tailwind (if used)
 * **Animations:** Framer Motion
 * **Email Service:** EmailJS
-* **Deployment:** (Add later — Vercel recommended)
+* **Deployment:** Vercel
 
 ---
 
